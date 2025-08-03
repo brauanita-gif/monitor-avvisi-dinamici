@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: monitor-avvisi-dinamici
+    env: python
+    buildCommand: |
+      apt-get update
+      apt-get install -y chromium-browser
+      pip install -r requirements.txt
+    startCommand: python3 main.py
+    plan: free
